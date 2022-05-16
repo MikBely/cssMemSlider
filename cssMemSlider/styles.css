@@ -132,6 +132,22 @@
     background-color: rgb(159, 159, 20); 
     transition:all 0.1s ease;
   }
+  #pic1:checked ~ .labels-text .labels label[for="pic1"] .label-block:hover,
+  #pic2:checked ~  .labels-text .labels label[for="pic2"] .label-block:hover,
+  #pic3:checked ~ .labels-text .labels label[for="pic3"] .label-block:hover,
+  #pic4:checked ~  .labels-text .labels label[for="pic4"] .label-block:hover{
+    background-color: rgb(95, 95, 9); 
+    transition:all 0.1s ease;
+  }
+
+  #pic1:checked ~ .labels-text .labels label[for="pic1"]:hover .label-block,
+  #pic2:checked ~  .labels-text .labels label[for="pic2"]:hover .label-block,
+  #pic3:checked ~ .labels-text .labels label[for="pic3"]:hover .label-block,
+  #pic4:checked ~  .labels-text .labels label[for="pic4"]:hover .label-block {
+  cursor: pointer;
+  background-color: #e83d74;
+  transition: 0.5s;
+}
   @media  (max-width:768px) {
     .slide img{
       width: 39rem
