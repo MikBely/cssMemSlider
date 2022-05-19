@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+  body{
+
+    background-color: rgb(24, 24, 23);
+  }
+ 
+  .slide img{
+    width:70%
+  }
+  .text{
+    height: 1rem;
+    overflow-y: hidden;
+    color: #fff;
+    width: 100%;
+  }
+  
+  .labels-text{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-bottom: 2rem;
+    align-items: center;
+    margin: 0 15%;
+  }
+  .slides-wrapper{
+    width: 400%;
+    overflow: hidden;
+    display:flex;
+    height: 100%;
+    padding-bottom: 1rem;
+    justify-content: center;
+  }
+  
+  .labels .labelpic{
+   
+    cursor: pointer;
+    margin-left: 1rem;
+    padding: 1rem;
+    transition: 0.5s;
+  }
+  .labels .labelpic:nth-child(1){
+    margin-left: 0
+  }
+  .label-block{
+     display: block;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 0.1rem;
+    border: 0.5rem solid transparent; 
+    background-color: azure;  
+    transition: 3s;
+  }
+  input[type="radio"]{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  .slides{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow:hidden;
+    flex-direction: column;
+    height:100%;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 0.8rem;
+    display: flex;    
+    row-gap: 0.5rem;
+    font-style: italic;
+  
+   
+    
+  }
+  
+  .slide{
+    display: flex;
+    width: 25%;
+    transform: translateX(0);
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .labels{
+    height: 0.01rem;
+    display: flex;
+    align-items: center;
+  }
+  .labelpic:hover .label-block{
+    background-color: rgb(159, 159, 20);  
+  }
+  
+  
+  #pic1:checked ~ .slides-wrapper .s1{
+    margin-left: 0;
+    transition:all 0.7s ease;
+  }
+  #pic2:checked ~ .slides-wrapper .s1{
+    margin-left: -50%;
+    transition:all 0.7s ease;
+  }
+  #pic3:checked ~ .slides-wrapper .s1{
+    margin-left: -100%;
+    transition:all 0.7s ease;
+  }
+  #pic4:checked ~ .slides-wrapper .s1{
+    margin-left: -150%;
+    transition:all 0.7s ease;
+  }
+  #pic1:checked ~ .labels-text .text .text-paragraph{
+    transform: translateY(0) ;
+    transition:all 0.7s ease;
+  }
+  #pic2:checked ~  .labels-text .text .text-paragraph{
+    transform: translateY(-100%) ; 
+    transition:all 0.7s ease;
+  }
+  #pic3:checked ~ .labels-text .text .text-paragraph{
+    transform: translateY(-200%);
+    transition:all 0.7s ease;
+  }
+  #pic4:checked ~  .labels-text .text .text-paragraph{
+    transform: translateY(-300%);
+    transition:all 0.7s ease;
+  }
+
+  #pic1:checked ~ .labels-text .labels label[for="pic1"] .label-block,
+  #pic2:checked ~  .labels-text .labels label[for="pic2"] .label-block,
+  #pic3:checked ~ .labels-text .labels label[for="pic3"] .label-block,
+  #pic4:checked ~  .labels-text .labels label[for="pic4"] .label-block{
+    background-color: rgb(159, 159, 20); 
+    transition:all 0.1s ease;
+  }
+  #pic1:checked ~ .labels-text .labels label[for="pic1"] .label-block:hover,
+  #pic2:checked ~  .labels-text .labels label[for="pic2"] .label-block:hover,
+  #pic3:checked ~ .labels-text .labels label[for="pic3"] .label-block:hover,
+  #pic4:checked ~  .labels-text .labels label[for="pic4"] .label-block:hover{
+    background-color: rgb(95, 95, 9); 
+    transition:all 0.1s ease;
+  }
+
+  #pic1:checked ~ .labels-text .labels label[for="pic1"]:hover .label-block,
+  #pic2:checked ~  .labels-text .labels label[for="pic2"]:hover .label-block,
+  #pic3:checked ~ .labels-text .labels label[for="pic3"]:hover .label-block,
+  #pic4:checked ~  .labels-text .labels label[for="pic4"]:hover .label-block {
+  cursor: pointer;
+  background-color: #e83d74;
+  transition: 0.5s;
+}
+  @media  (max-width:768px) {
+    .slide img{
+      width: 70%
+    }
+    
+  }
+  @media  (max-width:650px) {
+    .slide img{
+      width: 100%
+    }
+    .labels-text{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 0 1rem;
+      align-items: center;
+      row-gap: 3rem;
+    }
+    .slides-wrapper{
+      padding-bottom: 3rem;
+    }
+    .text{
+      height: 1.3rem;
+    }
+    .slides{
+      font-size: 1rem;
+    }
+  }
+  @media  (max-width:510px) {
+    .slide img{
+      width: 100%
+    }
+  }
+  @media  (max-width:350px) {
+    .slide img{
+      width: 100%
+    }
+  }
